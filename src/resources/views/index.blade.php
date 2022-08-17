@@ -45,7 +45,7 @@
     @foreach($items as $item) 
     <div class="shop-card">
       <div class="shop-card-img">
-        <img src="{{ Storage::url($item->image_path) }}" alt="準備中">
+        <img src= @if(Storage::disk('s3')->exists($item->image_path))"{{Storage::disk('s3')->url($item->image_path)}}" @else "{{ Storage::url($item->image_path) }}" @endif alt="準備中">
       </div>
       <div class="shop-card-contents">
         <div class="shop-card-name">

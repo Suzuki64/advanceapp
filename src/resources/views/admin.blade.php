@@ -107,9 +107,9 @@
         <tr>
           <form action="?" method="post">
             @csrf
-            <td><input type="number" name="user_id" value="{{$user->id}}" disabled></td>
-            <td><input type="text" name="name" value="{{$user->name}}" disabled></td>
-            <td><input type="email" name="email" value="{{$user->email}}" disabled></td>
+            <td><input type="number" name="user_id" value="{{$user->id}}" readonly></td>
+            <td><input type="text" name="name" value="{{$user->name}}" readonly></td>
+            <td><input type="email" name="email" value="{{$user->email}}" readonly></td>
             <td>
               <select name="role_id" id="">
                 @isset($user->role_id)

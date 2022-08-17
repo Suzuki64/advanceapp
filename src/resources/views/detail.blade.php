@@ -13,7 +13,7 @@
     </div>
 
     <div class="shop-img">
-      <img src="{{ Storage::url($items->image_path) }}" alt="準備中">
+      <img src= @if(Storage::disk('s3')->exists($items->image_path))"{{Storage::disk('s3')->url($items->image_path)}}" @else "{{ Storage::url($items->image_path) }}" @endif alt="準備中">
     </div>
 
     <div class="shop-tag">

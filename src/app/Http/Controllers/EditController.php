@@ -10,6 +10,7 @@ use App\Models\Reserve;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\EditRequest;
+use Illuminate\Support\Facades\Storage;
 
 class EditController extends Controller
 {
@@ -36,7 +37,10 @@ class EditController extends Controller
         $img = $request->file('image_path');
         
         if(isset($img)){
+            /*
             $path = $img->store('img','public');
+            */
+            $path = Storage::disk('s3')->putFile('img',$img,'public');
             if ($path) {
                 Shop::create([
                     'image_path' => $path,
@@ -58,7 +62,10 @@ class EditController extends Controller
         $img = $request->file('image_path');
         
         if(isset($img)){
+            /*
             $path = $img->store('img','public');
+            */
+            $path = Storage::disk('s3')->putFile('img',$img,'public');
             if ($path) {
                 Shop::find($request->id)->update([
                     'image_path' => $path,
