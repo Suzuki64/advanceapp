@@ -1,14 +1,14 @@
-#概要  
+# 概要  
 本アプリ「Rese」は、飲食店の予約を管理するためのアプリです。飲食店の予約や予約状況の確認をインターネット上で行うことができます。  
 
-##URL  
+## URL  
 http://18.177.138.165:8000/  
 
-##リポジトリ  
+## リポジトリ  
 ・github
 https://github.com/Suzuki64/advanceapp
 
-##機能一覧   
+## 機能一覧   
 ・会員登録機能  
 ・ログイン機能  
 ・ユーザ情報取得機能  
@@ -20,32 +20,16 @@ https://github.com/Suzuki64/advanceapp
 ・メール送信機能  
 ・リマインダメール送信機能  
 
-##使用技術  
+## 使用技術  
 laravel 8.83.23  
 docker 19.03.12  
 
-##環境構築  
-
+## 環境構築  
 本アプリはdockerを使用しています。docker Engineがインストールされた環境で以下の項目を実行してください。  
 
 ◆ソースコードの取得  
   「git clone https://github.com/Suzuki64/advanceapp」
   上記コマンドで任意のディレクトリにリポジトリを複製してください。  
-
-◆dataディレクトリの作成  
-  dokcerディレクトリの中にdbディレクトリがあります。dbディレクトリの中にdataフォルダを作成してください。  
-    .  
-    ├── docker/  
-    │   ├── app/  
-    │   │   ├ Dockerfile  
-    │   │   ├ php.ini  
-    │   │   └ 000-default.conf  
-    │   └── db/  
-    │        ├ data/　# このフォルダを作成  
-    │        └ my.cnf  
-    │  
-    ├── src/  
-    └── docker-compose.yml  
 
 ◆dockerイメージの構築  
   「docker build」でdockerイメージを構築してください。サーバーコンテナ（laravel_app）とデータベースコンテナ（Laravel_db）の2つのコンテナが作成されます。  
@@ -80,5 +64,5 @@ docker 19.03.12
 ◆pubicとstorageとのシンボリックリンクの作成  
   「php artisan storage::link」を実行してください。  
 
-##ER図  
+## ER図  
 reservesystem.drawio.png 参照  
