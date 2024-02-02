@@ -62,7 +62,7 @@ docker 19.03.12
   「php artisan migrate」を実行してください。  
 
 ◆pubicとstorageとのシンボリックリンクの作成  
-  「php artisan storage::link」を実行してください。  
+  「php artisan storage:link」を実行してください。  
 
 ## ER図  
 reservesystem.drawio.png 参照  
