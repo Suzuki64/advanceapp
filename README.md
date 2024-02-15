@@ -35,7 +35,7 @@ docker 19.03.12
   「docker compose build」でdockerイメージを構築してください。サーバーコンテナ（laravel_app）とデータベースコンテナ（Laravel_db）の2つのコンテナが作成されます。  
     
 ◆dockerコンテナの起動  
-　「dokcer-compose up -d」でコンテナを起動してください。
+　「docker-compose up -d」でコンテナを起動してください。
       「cgroups: cannot find cgroup mount destination: unknown.」のエラーが発生しましたら、一旦コンテナを削除し、下記のコマンドを実行の上、再度dockerイメージの構築から行ってください。  
       「sudo mkdir /sys/fs/cgroup/[任意のディレクトリ名]」  
       「sudo mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/[任意のディレクトリ名]」  
