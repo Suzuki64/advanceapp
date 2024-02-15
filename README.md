@@ -32,7 +32,7 @@ docker 19.03.12
   上記コマンドで任意のディレクトリにリポジトリを複製してください。  
 
 ◆dockerイメージの構築  
-  「docker build」でdockerイメージを構築してください。サーバーコンテナ（laravel_app）とデータベースコンテナ（Laravel_db）の2つのコンテナが作成されます。  
+  「docker compose build」でdockerイメージを構築してください。サーバーコンテナ（laravel_app）とデータベースコンテナ（Laravel_db）の2つのコンテナが作成されます。  
     
 ◆dockerコンテナの起動  
 　「dokcer-compose up -d」でコンテナを起動してください。
